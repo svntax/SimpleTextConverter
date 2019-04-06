@@ -19,7 +19,7 @@ class TextboxForm extends React.Component {
 	
 	render(){
 		return (
-			<div>
+			<div className="textbox-form">
 				<strong className="ui-textbox-label">{this.props.label}</strong>
 				<div>
 				<textarea className="ui-textbox" value={this.props.textValue} onChange={this.props.handleTyped}></textarea>

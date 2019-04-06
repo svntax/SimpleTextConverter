@@ -1,3 +1,11 @@
+.textbox-form {
+	background-color: #d6e4f9;
+	padding: 10px 15px 5px 15px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	margin: 15px 0 15px 0;
+	border-radius: 4px;
+}
+
 .ui-textbox {
 	resize: none;
 	width: 400px;
