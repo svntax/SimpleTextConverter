@@ -4,7 +4,7 @@ import "./App.css";
 
 import Utils from "../utils";
 
-class App extends React.Component { //TODO validate input for textboxes (things like whitespae between characters, invalid binary or hex)
+class App extends React.Component {
 	constructor(props){
 		super(props);
 		
@@ -31,14 +31,14 @@ class App extends React.Component { //TODO validate input for textboxes (things 
 	
 	convertFromBinary = (value) => {
 		this.setState({plaintext: Utils.binaryToText(value)});
-		//this.setState({binary: Utils.textToBinary(value)});
+		this.setState({binary: value.trim().replace(/\s/g, "")});
 		this.setState({hexadecimal: Utils.binaryToHexadecimal(value)});
 	}
 	
 	convertFromHexadecimal = (value) => {
 		this.setState({plaintext: Utils.hexadecimalToText(value)});
 		this.setState({binary: Utils.hexadecimalToBinary(value)});
-		//this.setState({hexadecimal: Utils.textToHexadecimal(value)});
+		this.setState({hexadecimal: value.trim().replace(/\s/g, "")});
 	}
 	
 	render(){

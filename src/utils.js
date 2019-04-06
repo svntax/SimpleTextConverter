@@ -18,7 +18,7 @@ function textToHexadecimal(plaintext){
 }
 
 function binaryToText(binarytext){
-    binarytext = binarytext.trim();
+    binarytext = binarytext.trim().replace(/\s/g, "");
     var output = "";
     for(var i = 0; i < binarytext.length; i+=8){
         var temp = binarytext.substr(i, 8);
@@ -29,14 +29,14 @@ function binaryToText(binarytext){
 }
 
 function binaryToHexadecimal(binarytext){
-    binarytext = binarytext.trim();
+    binarytext = binarytext.trim().replace(/\s/g, "");
     var plaintext = binaryToText(binarytext);
     var hexadecimalText = textToHexadecimal(plaintext);
     return hexadecimalText;
 }
 
 function hexadecimalToText(hexadecimaltext){
-    hexadecimaltext = hexadecimaltext.trim();
+    hexadecimaltext = hexadecimaltext.trim().replace(/\s/g, "");
     var output = "";
     for(var i = 0; i < hexadecimaltext.length; i+=2){
         var temp = hexadecimaltext.substr(i, 2);
@@ -47,7 +47,7 @@ function hexadecimalToText(hexadecimaltext){
 }
 
 function hexadecimalToBinary(hexadecimaltext){
-    hexadecimaltext = hexadecimaltext.trim();
+    hexadecimaltext = hexadecimaltext.trim().replace(/\s/g, "");
     var plaintext = hexadecimalToText(hexadecimaltext);
     var binaryText = textToBinary(plaintext);
     return binaryText;
