@@ -44,6 +44,7 @@ class App extends React.Component {
 	render(){
 		return (
 			<div className="app">
+				<div className="main-header">Simple Text Converter</div>
 				<TextboxForm label="Plaintext" convertFunction={this.convertFromPlaintext} textValue={this.state.plaintext} handleTyped={this.handleTypedPlaintext} />
 				<TextboxForm label="Binary" convertFunction={this.convertFromBinary} textValue={this.state.binary} handleTyped={this.handleTypedBinary} />
 				<TextboxForm label="Hexadecimal" convertFunction={this.convertFromHexadecimal} textValue={this.state.hexadecimal} handleTyped={this.handleTypedHexadecimal} />
